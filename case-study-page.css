@@ -24,3 +24,14 @@ h3 {font-family:Raleway,sans-serif;font-size:1.6em;font-weight:normal;margin-bot
 /* FOOTER */
 footer {background-color:var(--bg);padding:60px;}
 footer a {text-decoration:none;}
+
+/* dark-mode colors */
+@media (prefers-color-scheme:dark) {
+:root {
+--h:white;
+--text:white;
+--bg:#4b495a;
+--highlight:#355AF599;
+--link:white;
+--divider:black;
+}}
