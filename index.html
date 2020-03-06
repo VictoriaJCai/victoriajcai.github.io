@@ -35,12 +35,16 @@ header h2 {margin-top:0;}
 
 /* case-study list styles */
 #portfolio {background-color:var(--bg-faint);padding:1px 60px;}
-#portfolio a {display:block;position:relative;margin:60px 0;text-decoration:none;}
-#portfolio a:hover {color:inherit;}
-#portfolio a div {background-position:left center;background-size:contain;background-repeat:no-repeat;background-color:var(--bg);padding:60px 36vw 60px 60px;transition:all 240ms;}
-#portfolio a:nth-of-type(even) div {background-position:right center;padding:60px 60px 60px 36vw;}
-#portfolio a:hover div {transform:scale(1.05);}
+#portfolio .tile {background-size:contain;display:block;position:relative;margin:60px 0;text-decoration:none;}
+#portfolio .tile:hover {color:inherit;}
+#portfolio .tile div {background-position:left center;background-size:contain;background-repeat:no-repeat;background-color:var(--bg);padding:60px 36vw 60px 60px;transition:all 240ms;}
+#portfolio .tile:nth-of-type(even) div {background-position:right center;padding:60px 60px 60px 36vw;}
+#portfolio .tile:hover div {transform:scale(1.05);}
 #portfolio h3 {font-family:Raleway,sans-serif;font-size:1.6em;font-weight:normal;margin-bottom:.3em;}
+
+.sux {background-image:url(images/scheduleux/sux-preview.png);}
+.dictionary {background-image:url(images/dictionary/dictionary-preview.png);}
+.last-mile {background-image:url(images/last-mile/last-mile-preview.png);}
 
 /* footer styles */
 footer {background-color:var(--bg);}
@@ -77,15 +81,15 @@ footer a {text-decoration:none;}
 
 	<!-- BEGIN CASE-STUDY LIST -->
 	<section id="portfolio"><div class="container">
-		<a href="" title="ScheduleUX Administrative Portal"><div class="container">
+		<a class="tile sux" href="" title="ScheduleUX Administrative Portal"><div class="container">
 			<h3>ScheduleUX Administrative Portal</h3>
 			<p>Growing the tools to support customer service, sales, and administration at scale.</p>
 		</div></a>
-		<a href="https://github.com/brimwd/product-management-reference" title="Product Management Reference Dictionary"><div class="container">
+		<a class="tile dictionary" href="https://github.com/brimwd/product-management-reference" title="Product Management Reference Dictionary"><div class="container">
 			<h3>Product Management Dictionary</h3>
 			<p>A community-sourced reference for (Software) Product Management and UX-related terms.</p>
 		</div></a>
-		<a href="last-mile.html" title="Optimizing The Last Mile"><div class="container">
+		<a class="tile last-mile" href="last-mile.html" title="Optimizing The Last Mile"><div class="container">
 			<h3>Optimizing The Last Mile</h3>
 			<p>A Comparison of Methodologies for Measuring Transport Distance in Supply Chain Delivery.</p>
 		</div></a>
