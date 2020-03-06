@@ -33,8 +33,12 @@
 <section class="overview">
 	<h2>Project Overview</h2>
 	<p>The "last mile" in supply chain management involves the terminating segment of the forward supply chain where products are delivered from the last warehousing location in the supply chain to the customer.</p>
-	<p>The Last Mile is considered to be one of the most costly (Chopra, 2003) and highest polluting segments (Ülkü, 2012) of the supply chain.</p>
+	<p>The Last Mile is considered to be one of the most costly (<cite>Chopra, 2003</cite>) and highest polluting segments (<cite>Ülkü, 2012</cite>) of the supply chain.</p>
 	<p>This project evaluates different approaches to supply chain management decision models for evaluating Last Mile cost and carbon footprint.</p>
+	<figure class="citation">
+		<p>Published July 16, 2016 Proceedings of 36th International Business Research Conference 14, Ryerson University, Toronto, Canada</p>
+		<figcaption>ISBN: <a href="https://www.researchgate.net/publication/306425079_A_Comparison_of_Methodologies_for_Measuring_Transport_Distance_in_Supply_Chain_Last_Mile_Delivery" target="_blank">978-1-925488-10-4</a></figcaption>
+	</figure>
 </section>
 <section class="background">
 	<h2>Background</h2>
@@ -66,11 +70,11 @@
 		<img src="images/last-mile/Haversine-formula.png" alt="Haversine formula" />
 		<figcaption>Haversine Formula</figcaption>
 	</figure>
-	<p>The origin-to-destination delivery mileage distance is a key input in many Last Mile decision models. The cost and carbon emissions resulting from the delivery process are a direct function of the delivery travel distance. The mileage distance for origin-to-destination deliveries can be determined using a variety of web-based mileage calculators such as Google Maps, Travelmath, WorldAtlas or MapQuest.</p>
+	<p>The origin-to-destination delivery mileage distance is a key input in many Last Mile decision models. The cost and carbon emissions resulting from the delivery process are a direct function of the delivery travel distance. The mileage distance for origin-to-destination deliveries can be determined using a variety of web-based mileage calculators such as Google Maps, Travelmath, WorldAtlas, or MapQuest.</p>
 	<p>By inputting city name, street address or zip code information, the delivery mileage distance between an origin and destination can be found.</p>
-	<p>An alternative method for determining mileage distance involves approximating the distance using the <a href="https://en.wikipedia.org/wiki/Haversine_formula" target="_blank">Haversine formula</a>.</p>
+	<p>An alternative method for determining mileage distance involves approximating the distance using the Haversine formula (above image).</p>
 	<p>The Haversine formula, which is a special case of the general Law of Haversines which relates the sides and angles of spherical triangles, can be used to estimate the distance between an origin and destination based on their longitudes and latitudes. The approximate distance, <var>d</var>, between an origin and destination can be found by evaluating the Haversine formula.</p>
-	<p>An approximation of the distance mileage between an origin and destination can be computed using an online Haversine calculator (<a href="http://www.movable-type.co.uk/scripts/latlong.html" target="_blank">See an example</a>). In the next section a case study is used to analyze the error between approximated mileage distances as calculated by the Haversine formula and true mileage distances as found by Google Maps.</p>
+	<p>An approximation of the distance mileage between an origin and destination can be computed using an online Haversine calculator. In the next section a case study is used to analyze the error between approximated mileage distances as calculated by the Haversine formula and true mileage distances as found by Google Maps.</p>
 </section>
 <section>
 	<h2>Case Study</h2>
@@ -78,7 +82,7 @@
 		<img src="images/last-mile/Table-2-City-Chart.png" alt="City Chart"/>
 		<figcaption>Table 2 - City Chart</figcaption>
 	</figure>
-	<p>The state of Ohio is located in the Midwest region of the United States and is subdivided into 88 counties with <a href="https://en.wikipedia.org/wiki/List_of_cities_in_Ohio" target="_blank">251 cities</a>. Using this sample frame, a non-probability sample of 20 counties was selected. One city was then selected from each of the 20 counties to define a twenty by twenty origin-to-destination matrix of cities. The procedure used to select the counties and cities involved superimposing a grid of five horizontal and four vertical lines onto a map of the state of Ohio.</p>
+	<p>The state of Ohio is located in the Midwest region of the United States and is subdivided into 88 counties with 251 cities. Using this sample frame, a non-probability sample of 20 counties was selected. One city was then selected from each of the 20 counties to define a twenty by twenty origin-to-destination matrix of cities. The procedure used to select the counties and cities involved superimposing a grid of five horizontal and four vertical lines onto a map of the state of Ohio.</p>
 	<p>Given the rectangular shape of the state of Ohio, the intersections of the grid lines identified 20 counties which reasonably represented the geographic layout of the state. The closest city to each grid intersection point was then selected for the study. The longitude and latitude information for each city defined the origin-to-destination matrix was used in the Haversine mileage estimates (see Table 2).</p>
 	<p>When the twenty cities identified in Table 2 are assembled into a 20 row by 20 column origin-to-destination matrix there are 190 distinct origin to destination delivery route combinations. The percentage error (<var>PE</var>) resulting from the Haversine approximations of the true mileages of the 190 origin-destination delivery routes was calculated as follows:</p>
 	<pre><code><var>PE</var> = 100%[(true mileage – approximated mileage)/(true mileage)]</code></pre>
@@ -90,17 +94,20 @@
 	</div>
 	<p>Examining Figure 1 we observe that for the case study data, using Haversine formula to approximate mileage distances between the 190 origin and destination combinations resulted in an average percentage error of 16.1% with a standard deviation of 7.6%. As illustrated by the interquartile range, half of the 190 errors were within the range of 10.7% to 21.4%.</p>
 	<p>The Haversine approximation predominately understated the true mileage distance in 187 of 190 error comparisons. The median percentage error of 15.9% relative to the average percentage error of 16.1% indicates that the shape of the percentage error distribution was close to symmetric.</p>
-	<p>The normal quantile plot of the PE data shown in Figure 2 suggests that the normal distribution is a reasonable probability model to describe the percentage error data in this case study.</p>
+	<p>The normal quantile plot of the <var>PE</var> data shown in Figure 2 suggests that the normal distribution is a reasonable probability model to describe the percentage error data in this case study.</p>
 </section>
 <section>
 	<h2>Summary and Conclusions</h2>
 	<p>Determining last mile delivery mileage distances using web-based (or in-house purchased or leased) mileage calculator requires the user to enter each city name, street address, or zip code for all origin and destination combinations. When the number of origins and destinations becomes large the number data entries required to determine the delivery mileage increases at a nearly exponential rate</p>
-	<p>Our data-driven method is cost-efficient.</p>
+
+	<h3 class="highlight">Our data-driven method is cost-efficient.</h3>
 	<p>To circumvent this burden, we examined estimating the mileage distances between origins and destinations using longitude and latitude data and then estimating the mileage using Haversine formula. Longitude and latitude data for cities (or zip codes) for vast geographic regions can be downloaded from the Internet in a single keystroke. Also, these longitude and latitude data can be downloaded at no cost thus avoiding any investment cost required to purchase or lease and maintain proprietary mileage distance calculators.</p>
-	<p>Our estimate method has a relatively high error bound.</p>
+
+	<h3 class="highlight">Our estimate method has a relatively high error bound.</h3>
 	<p>When implemented in a spreadsheet environment, the Haversine approximation methodology demonstrated in this paper eliminates the need to enter city names, individual addresses or zip code information thus contributing to a more efficient methodology for determining delivery mileage inputs for Last Mile decision models.</p>
 	<p>For the state of Ohio case study, the Haversine approximation had a relatively large average percentage error of 16.1% and underestimated the true mileage distance for nearly all origin and destination combinations.</p>
-	<p>Error-correction or data modifier can be further applied to our results.</p>
+
+	<h3 class="highlight">Error-correction or data modifier can be further applied to our results.</h3>
 	<p>Since delivery costs and carbon emissions are proportional to the delivery mileage distance traveled by a transport truck, many analysts may find this magnitude of error unacceptable and tend not to use the Haversine formula to determine mileage estimates for Last Mile decision models.</p>
 	<p>Future research can be conducted to provide an error correction and bounding information which can be applied to last mile delivery mileage estimates generated by the Haversine formula.</p>
 	<p>Using the error correction and bounding information may allow the analyst to take advantage of the benefits of reduced data entry and software investment cost that the Haversine distance mileage approximation methodology affords.</p>
