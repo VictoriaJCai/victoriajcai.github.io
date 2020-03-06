@@ -34,21 +34,34 @@ header h2 {margin-top:0;}
 .contact a {margin-right:14px;}
 
 /* case-study list styles */
-.sux div {background-image:url(images/scheduleux/sux-preview.png);}
-.dictionary div {background-image:url(images/dictionary/dictionary-preview.png);}
-.last-mile div {background-image:url(images/last-mile/last-mile-preview.png);}
+.sux .img {background-color:#E0F2F1;}
+.dictionary .img {background-color:#FFFDEB;}
+.last-mile .img {background-color:#43436d;}
 
-#portfolio {background-color:var(--bg-faint);padding:1px 60px;}
-#portfolio .tile {background-size:contain;display:block;position:relative;margin:60px 0;text-decoration:none;}
+#portfolio {background-color:var(--bg-faint);padding:1px 20px;}
+#portfolio .tile {display:block;position:relative;margin:30px 0;text-decoration:none;}
 #portfolio .tile:hover {color:inherit;}
-#portfolio .tile div {background-position:right center;background-size:contain;background-repeat:no-repeat;background-color:var(--bg);padding:60px 36vw 60px 60px;transition:all 240ms;}
-#portfolio .tile:nth-of-type(even) div {background-position:left center;padding:60px 60px 60px 36vw;}
-#portfolio .tile:hover div {transform:scale(1.05);}
+#portfolio .tile > div {background-color:var(--bg);padding:0;transition:all 240ms;}
+#portfolio .tile div div {display:block;padding:15px;}
+#portfolio .tile div .img {display:flex;align-items:center;justify-content:center;}
+#portfolio .tile img {width:100%;max-width:260px;}
+#portfolio .tile:hover > div {transform:scale(1.05);}
 #portfolio h3 {font-family:Raleway,sans-serif;font-size:1.6em;font-weight:normal;margin-bottom:.3em;}
 
 /* footer styles */
 footer {background-color:var(--bg);}
 footer a {text-decoration:none;}
+
+@media (min-width:820px) {
+#portfolio {padding:1px 60px;}
+#portfolio .tile {margin:60px 0;}
+#portfolio .tile > div {display:flex;}
+#portfolio .tile div div {width:63%;padding:60px;}
+#portfolio .tile div .img {order:2;max-width:37%;}
+#portfolio .tile img {max-width:100%;}
+#portfolio .tile:nth-of-type(even) div div {order:2;}
+#portfolio .tile:nth-of-type(even) div .img {order:1;}
+}
 
 /* dark-mode colors */
 @media (prefers-color-scheme:dark) {
@@ -82,16 +95,25 @@ footer a {text-decoration:none;}
 	<!-- BEGIN CASE-STUDY LIST -->
 	<section id="portfolio"><div class="container">
 		<a class="tile sux" href="" title="ScheduleUX Administrative Portal"><div class="container">
-			<h3>ScheduleUX Administrative Portal</h3>
-			<p>Growing the tools to support customer service, sales, and administration at scale.</p>
+			<span class="img"><img src="images/sux/sux-preview.png" alt="ScheduleUX icon" /></span>
+			<div>
+				<h3>ScheduleUX Administrative Portal</h3>
+				<p>Growing the tools to support customer service, sales, and administration at scale.</p>
+			</div>
 		</div></a>
 		<a class="tile dictionary" href="https://github.com/brimwd/product-management-reference" title="Product Management Reference Dictionary"><div class="container">
-			<h3>Product Management Dictionary</h3>
-			<p>A community-sourced reference for (Software) Product Management and UX-related terms.</p>
+			<span class="img"><img src="images/dictionary/dictionary-preview.png" alt="Dictionary icon" /></span>
+			<div>
+				<h3>Product Management Dictionary</h3>
+				<p>A community-sourced reference for (Software) Product Management and UX-related terms.</p>
+			</div>
 		</div></a>
 		<a class="tile last-mile" href="last-mile.html" title="Optimizing The Last Mile"><div class="container">
-			<h3>Optimizing The Last Mile</h3>
-			<p>A Comparison of Methodologies for Measuring Transport Distance in Supply Chain Delivery.</p>
+			<span class="img"><img src="images/last-mile/last-mile-preview.png" alt="Last-Mile icon" /></span>
+			<div>
+				<h3>Optimizing The Last Mile</h3>
+				<p>A Comparison of Methodologies for Measuring Transport Distance in Supply Chain Delivery.</p>
+			</div>
 		</div></a>
 	</div></section>
 	<!-- END CASE-STUDY LIST -->
