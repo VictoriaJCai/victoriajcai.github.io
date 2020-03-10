@@ -119,7 +119,7 @@ figure.can-zoom img {max-width:100%;}
 figure.can-zoom figcaption {text-align:center;}
 
 /* TYPOGRAPHY */
-h1 {font-family:Gelasio,sans-serif;font-weight:600;font-size:2.7em;letter-spacing:2.3px;line-height:.8em;margin:0;}
+h1 {font-family:Gelasio,sans-serif;font-weight:600;font-size:2.7em;letter-spacing:2.3px;line-height:1.1em;margin:0;}
 h1 span {font-weight:700;font-size:0.79em;text-transform:uppercase;}
 h3 {font-family:Gelasio,sans-serif;font-size:1.6em;font-weight:normal;margin-bottom:.3em;}
 
